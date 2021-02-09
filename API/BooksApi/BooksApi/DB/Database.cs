@@ -10,7 +10,9 @@ namespace BooksApi.DB
         private List<Author> authorList;
         private List<Book> bookList;
 
-        public Database()
+        private static Database database = null;
+
+        private Database()
         {
             userList = new List<User>();
             authorList = new List<Author>();
@@ -18,7 +20,15 @@ namespace BooksApi.DB
             createUsers();
             createAuthors();
             createBooks();
-            
+        }
+
+        public static Database getInstance()
+        {
+            if (database == null)
+            {
+                database = new Database();
+            }
+            return database;
         }
 
         public User getUser(String email, String password)
@@ -58,6 +68,16 @@ namespace BooksApi.DB
         public List<Book> getBooks()
         {
             return bookList;
+        }
+
+        public bool newUser(string firstname, string lastname, string email, string password)
+        {
+            foreach (User user in userList)
+            {
+                if (user.email.Equals(email)) return false;
+            }
+            userList.Add(new User(Guid.NewGuid().ToString(), firstname, lastname, email, password));
+            return true;
         }
 
         private void createAuthors()

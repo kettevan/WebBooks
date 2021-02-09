@@ -6,24 +6,10 @@
       <File FileName="BooksApi/Program.cs" />
       <File FileName="BooksApi/Model/User.cs" />
       <File FileName="BooksApi/DB/Database.cs" />
-      <File FileName="BooksApi/Controllers/usersController.cs" Line="37" Column="25" />
+      <File FileName="BooksApi/Controllers/usersController.cs" />
       <File FileName="BooksApi/Model/Author.cs" />
       <File FileName="BooksApi/WeatherForecast.cs" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="BooksApi" expanded="True">
-            <Node name="BooksApi" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="DB" expanded="True" />
-              <Node name="Model" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

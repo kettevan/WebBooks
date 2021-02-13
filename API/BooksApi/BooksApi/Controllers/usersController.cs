@@ -28,12 +28,42 @@ namespace BooksApi.Controllers
             return Ok(list);
         }
 
+        [HttpGet("getBookByID")]
+        public async Task<IActionResult> getBookByID(String id)
+        {
+            var book = database.getBookById(id);
+            return Ok(book);
+        }
+
+
+        [HttpGet("searchBook")]
+        public async Task<IActionResult> searchBook(string searchText, bool byName)
+        {
+            if (searchText == null || searchText.Equals(""))
+            {
+                return await getBooks();
+            }
+            else
+            {
+                if (byName) {   
+                    var list = database.searchBookbyName(searchText);
+                    return Ok(list);
+                } else
+                {
+                    var list = database.searchBookByAuthor(searchText);
+                    return Ok(list);
+                }
+                
+            }
+        }
+
         [HttpGet("books")]
         public async Task<IActionResult> getBooks()
         {
             var list = database.getBooks();
             return Ok(list);
         }
+
 
         [HttpGet("isUser")]
         public async Task<IActionResult> isUser(String email, string password)

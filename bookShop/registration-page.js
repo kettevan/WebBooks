@@ -1,6 +1,24 @@
 const registerForm = document.getElementById("registration-form");
 const registerButton = document.getElementById("regisrtation-form-submit");
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 registerButton.addEventListener("click", (e) => {
     e.preventDefault();
     const firstName = registerForm.firstName.value;
@@ -15,13 +33,13 @@ registerButton.addEventListener("click", (e) => {
            console.log(xhttp.responseText)
            if (xhttp.responseText === 'true') {
                 alert("New Account Saved, Please Login again.");
-                
            } else {
-                alert("User with this email already created")
+                modal.style.display = "block";
            }
         } 
     }
     xhttp.open("POST", url, true);
     xhttp.send();
+
 
 })

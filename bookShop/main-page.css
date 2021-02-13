@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'cardo-regular';
+    src: url('assets/fonts/Cardo-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+
+ html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: 'cardo-regular';
+    justify-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("assets/images/backgroundBooks.jpg");
+    overflow: auto;
+  }
+  .main-holder {
+    width: 95%;
+    height: 80%;
+    display: grid;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+    margin: auto;
+  }
+  
+  main{
+      box-sizing: border-box;
+  }
+
+  .header {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-bottom: 30px;
+    padding: 20px 10px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px black;
+  }
+  
+  .header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .header a.active {
+    background-color: rgb(253, 160, 160);
+    color: white;
+  }
+  
+  .header-right {
+    float: right;
+  }
+
+  .header .search-container {
+    float: right;
+  }
+  
+  .header input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    font-family: 'cardo-regular';
+    border: none;
+  }
+  
+  .header .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    font-family: 'cardo-regular';
+    border: none;
+    cursor: pointer;
+  }
+
+  .search-container p {
+    float: left;
+    font-size: 14px;
+    padding-right: 10px;
+    /* margin-top: 8px; */
+  }
+  
+  .header .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-left {
+      float: left;
+    }
+  }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    font-size: 12px;
+    background-color: #f1f1f1;
+    
+  }
+  
+  .price {
+    color: grey;
+    font-size: 16px;
+  }
+  
+  .card button {
+    position: relative;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .items {
+      justify-content: center;
+  }
+
+
+  .column {
+    width: 15%;
+    padding: 0 10px;
+    display:inline-block;
+    vertical-align: middle;
+    align-items: stretch;
+    float: none; 
+}
+
+
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    text-align:center;
+    margin:0 auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#radio-left {
+  float: left;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 50%;
+    display: block;
+    padding: 0 10px;
+    display:inline-block;
+    margin-bottom: 20px;
+    float: none; 
+  }
+
+  .row {
+    text-align:center;
+    margin:0 auto;
+  }
+  .header .search-container {
+    float: none;
+  }
+  .header input[type=text], .header .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .header input[type=text] {
+    border: 1px solid #ccc; 
+    width: 90%;
+  }
+}

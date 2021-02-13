@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Shop</title>
+  <link rel="stylesheet" href="main-page.css">
+  <script defer src="main-page.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <!-- <a href="#default" class="logo"> Book Shop  </a> -->
+        <div class="header-left">
+          <a class="active" href="#home">Books</a>
+          <a href="#contact">My Page</a>
+          <a href="#about">About</a>
+        </div>
+       
+        <div class="search-container">
+          <form id="searchForm">
+            <input type="text" placeholder="Search by name.." name="search" id="searchInput">
+            <button type="submit" id="searchSubmitButton">Submit</button>
+            <p>
+              <input type="checkbox" id="author" name="author" value="author">
+              <label for="name">By Author</label><br>
+            </p>
+          </form>
+        </div>
+        
+        
+    </div>
+    <main class="items" id="bookItems"> 
+      
+    </main>
+</body>

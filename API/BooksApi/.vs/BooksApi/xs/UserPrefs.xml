@@ -1,18 +1,36 @@
 ﻿<Properties StartupConfiguration="{4D66EEFB-BAB9-4A0A-A41C-F7F31595517D}|Default">
   <MonoDevelop.Ide.ItemProperties.BooksApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BooksApi/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BooksApi/Program.cs">
     <Files>
       <File FileName="BooksApi/Startup.cs" Line="36" Column="1" />
-      <File FileName="BooksApi/Program.cs" />
-      <File FileName="BooksApi/Model/User.cs" />
-      <File FileName="BooksApi/DB/Database.cs" />
-      <File FileName="BooksApi/Controllers/usersController.cs" />
+      <File FileName="BooksApi/Model/User.cs" Line="9" Column="45" />
+      <File FileName="BooksApi/DB/Database.cs" Line="163" Column="1" />
+      <File FileName="BooksApi/Controllers/usersController.cs" Line="31" Column="27" />
       <File FileName="BooksApi/Model/Author.cs" />
       <File FileName="BooksApi/WeatherForecast.cs" />
+      <File FileName="BooksApi/Model/Book.cs" Line="26" Column="40" />
+      <File FileName="BooksApi/Program.cs" Line="14" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BooksApi" expanded="True">
+            <Node name="BooksApi" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="DB" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

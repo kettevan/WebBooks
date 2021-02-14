@@ -9,6 +9,7 @@ namespace BooksApi.DB
         private List<User> userList;
         private List<Author> authorList;
         private List<Book> bookList;
+        private List<Cart> carts;
 
         private static Database database = null;
 
@@ -17,6 +18,7 @@ namespace BooksApi.DB
             userList = new List<User>();
             authorList = new List<Author>();
             bookList = new List<Book>();
+            carts = new List<Cart>();
             createUsers();
             createAuthors();
             createBooks();
@@ -108,6 +110,35 @@ namespace BooksApi.DB
             }
             return null;
         }
+        public bool addCartItem(String userId, String bookId)
+        {
+            foreach (var cart in carts)
+            {
+                if (cart.user.ID.Equals(userId))
+                {
+                    foreach (var book in bookList)
+                    {
+                        if (book.ID.Equals(bookId))
+                        {
+                            cart.books.Add(book);
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+        public List<Book> getUserBooks(string userId)
+        {
+            foreach (var item in carts)
+            {
+                if (item.user.ID.Equals(userId))
+                {
+                    return item.books;
+                }
+            }
+            return new List<Book>();
+        }
 
         public bool newUser(string firstname, string lastname, string email, string password)
         {
@@ -115,7 +146,9 @@ namespace BooksApi.DB
             {
                 if (user.email.Equals(email)) return false;
             }
-            userList.Add(new User(Guid.NewGuid().ToString(), firstname, lastname, email, password));
+            User user1 = new User(Guid.NewGuid().ToString(), firstname, lastname, email, password);
+            userList.Add(user1);
+            carts.Add(new Cart(user1, new List<Book>()));
             return true;
         }
 
@@ -132,10 +165,13 @@ namespace BooksApi.DB
 
         private void createUsers()
         {
-            userList.Add(new User(Guid.NewGuid().ToString(), "saba", "pochkhua", "sabuna@mail.com", "123"));
-            userList.Add(new User(Guid.NewGuid().ToString(), "ketevan", "dateshidze", "ketuna@mail.com", "123"));
-            userList.Add(new User(Guid.NewGuid().ToString(), "giorgi", "kobuladze", "giuna@mail.com", "123"));
-            userList.Add(new User(Guid.NewGuid().ToString(), "bob", "marley", "bob@mail.com", "123"));
+            User user1 = new User(Guid.NewGuid().ToString(), "saba", "pochkhua", "sabuna@mail.com", "123");
+            userList.Add(user1);
+            carts.Add(new Cart(user1, new List<Book>()));
+
+            User user2 = new User(Guid.NewGuid().ToString(), "bob", "marley", "bob@mail.com", "123");
+            userList.Add(user2);
+            carts.Add(new Cart(user2, new List<Book>()));
         }
 
         private void createBooks()

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'cardo-regular';
+    src: url('assets/fonts/Cardo-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    font-family: 'cardo-regular';
+    /* display: grid;
+    justify-items: center; */
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("assets/images/backgroundBooks.jpg");
+  }

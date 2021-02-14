@@ -12,33 +12,23 @@
 <body>
     <div class="header">
         <div class="header-left">
-          <a class="active" href="#home">Books</a>
-          <a href="#contact">My Page</a>
-          <a href="#about">About</a>
+          <a class="active" href="#main">Books</a>
+          <a href="#cart">My Cart</a>
         </div>    
         
     </div>
     <div class="container">
         <h1 id="bookDetailsId">Book Details: </h1>
-        <div class="row">
-          <div class="column" id="imageCol">
-            <img src="./assets/images/bookImages/PrideAndPrejudice.jpg" style="width:50%" >
+        <div class="row" id="innerInfo">
+
+        </div>
+        <div id="myModal" class="modal">
+
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Book Added To Cart</p>
           </div>
-          <div class="column">
-            <form>
-              <h1>Pride And Prejudice </h1>
-              <h2>Price: $19.90</h2>
-              <h2>Description:</h2>
-              <h3>
-                Emma is a comedy of errors full of misunderstandings, misguided plans and a heroine who Austen merrily pokes fun at. 
-                It has a fair amount in common with Pride and Prejudice, but Emma is a less obviously likeable heroine than Lizzy, who 
-                is somewhat deluded in her matchmaking schemes. But this makes for the novel’s real joy; enjoying the incredibly clever way
-                Austen contrasts what we know to be true about Emma with how she herself perceives her own story.
-              </h3>
-              <h3 style="font-style: italic;">Rating: 5.0 </h3>
-              <p><button id="addToCartButton">Add To Cart</button></p>      
-            </form>
-          </div>
+        
         </div>
       </div>
 </body>

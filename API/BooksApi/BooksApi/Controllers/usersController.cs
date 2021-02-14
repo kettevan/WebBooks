@@ -84,5 +84,18 @@ namespace BooksApi.Controllers
             var result = database.newUser(firstname, lastname, email, password);
             return Ok(result);
         }
+
+        [HttpPost("addCartItem")]
+        public async Task<IActionResult> addCartItem(string userId, string id)
+        {
+            var result = database.addCartItem(userId, id);
+            return Ok(result);
+        }
+        [HttpGet("getUserBooks")]
+        public async Task<IActionResult> getUserBooks(string userId)
+        {
+            var result = database.getUserBooks(userId);
+            return Ok(result);
+        }
     }
 }
